@@ -5,15 +5,23 @@ body {
 }
 
 /* HEADER */
+
 .header,
 .hero {
   background-color: #1f2937;
   color: #fff;
+  padding: 1rem 5rem;
 }
 
-.header {
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.header .container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -25,7 +33,7 @@ body {
 .right-aside {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 23px;
 }
 
 .header-link {
@@ -34,3 +42,25 @@ body {
 }
 
 /* HERO Section */
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.hero-text h1,
+.hero-text p {
+  margin: 10px 0;
+}
+
+.hero-text button {
+  padding: 5px 20px;
+  background-color: #3882f6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* 2nd section */
