@@ -1,0 +1,36 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+.header,
+.hero {
+  background-color: #1f2937;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.header-logo {
+  font-size: 24px;
+  color: #f9faf8;
+}
+
+.right-aside {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-link {
+  color: #e5e7eb;
+  font-size: 18px;
+}
+
+/* HERO Section */
