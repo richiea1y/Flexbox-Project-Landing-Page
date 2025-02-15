@@ -64,3 +64,42 @@ body {
 }
 
 /* 2nd section */
+.second-section .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-section-text {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+.second-section h2 {
+  font-size: 24px;
+  color: #1f2937;
+  font-weight: 900;
+}
+
+.information-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 110px;
+}
+
+.information-container p {
+  font-size: 12px;
+  text-align: center;
+  color: rgb(108, 108, 109);
+}
+
+.square-box {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #3882f6;
+  border-radius: 10px;
+}
