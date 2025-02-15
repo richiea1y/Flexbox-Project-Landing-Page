@@ -22,6 +22,7 @@ body {
 .header .container {
   display: flex;
   justify-content: space-between;
+  align-items: stretch; /* 讓左右內容等高 */
   align-items: center;
 }
 
@@ -47,6 +48,26 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   gap: 2rem;
+}
+
+.hero-text {
+  flex: 1; /* 讓文字內容填滿可用空間 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-image {
+  flex: 1; /* 讓圖片佔據與文字相等的空間 */
+  display: flex;
+  align-items: center; /* 讓圖片垂直置中 */
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 確保圖片填滿區塊，不變形 */
+  max-height: 250px; /* 可依需求調整最大高度 */
 }
 
 .hero-text h1,
