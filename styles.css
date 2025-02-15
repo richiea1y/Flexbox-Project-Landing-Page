@@ -55,6 +55,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start; /* 讓內容靠左對齊 */
+  /* 
+  按鈕變寬 不是因為 flex: 1;，而是因為 align-items: stretch; 讓按鈕填滿整個 .hero-text 的寬度。當你改成 flex-start，按鈕就回復到它應該有的大小。
+  
+  這種行為是 Flexbox 的默認特性，可以記住：
+  - Row（橫向排列）模式時，align-items 影響 高度。
+  - Column（縱向排列）模式時，align-items 影響 寬度（這就是為什麼你的按鈕被拉伸）。 */
 }
 
 .hero-image {
