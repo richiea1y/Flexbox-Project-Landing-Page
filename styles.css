@@ -103,3 +103,32 @@ body {
   border: 2px solid #3882f6;
   border-radius: 10px;
 }
+
+/* Quote section */
+.quote {
+  background-color: #e5e7eb;
+  padding: 1rem 5rem;
+}
+
+.quote .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* align-items: center; */
+  max-width: 600px;
+}
+
+.quote-text {
+  font-size: 24px;
+  color: rgb(61, 80, 108);
+  font-style: italic;
+  font-weight: 300;
+}
+
+.quote-author {
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+  text-align: right;
+  margin: 5px 3rem;
+}
