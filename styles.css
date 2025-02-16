@@ -5,41 +5,38 @@ body {
 }
 
 /* HEADER */
-
 .header,
-.hero {
+.hero,
+footer {
   background-color: #1f2937;
-  color: #fff;
-  padding: 1rem 5rem;
+  padding: 2rem 0;
 }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 2rem 0;
+.header,
+footer {
+  font-size: 18px;
+  color: #e5e7eb;
 }
 
 .header .container {
   display: flex;
   justify-content: space-between;
-  align-items: stretch; /* 讓左右內容等高 */
   align-items: center;
+  width: 800px;
+  /* 最小化的時候 */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.right-aside {
+  display: flex;
+  align-items: space-between;
+  gap: 24px;
 }
 
 .header-logo {
   font-size: 24px;
   color: #f9faf8;
-}
-
-.right-aside {
-  display: flex;
-  align-items: center;
-  gap: 23px;
-}
-
-.header-link {
-  color: #e5e7eb;
-  font-size: 18px;
 }
 
 /* HERO Section */
@@ -159,4 +156,15 @@ body {
   font-weight: 900;
   text-align: right;
   margin: 5px 3rem;
+}
+
+/* footer section */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+footer p {
+  margin: 0;
 }
