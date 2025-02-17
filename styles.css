@@ -9,13 +9,16 @@ body {
 .hero,
 footer {
   background-color: #1f2937;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
 }
 
 .header,
 footer {
-  font-size: 18px;
   color: #e5e7eb;
+}
+
+.header-link {
+  font-size: 14px;
 }
 
 .header .container {
@@ -26,6 +29,7 @@ footer {
   /* 最小化的時候 */
   max-width: 1000px;
   margin: 0 auto;
+  margin-bottom: 1rem;
 }
 
 .right-aside {
@@ -151,7 +155,7 @@ footer {
 }
 
 .quote .container {
-  margin: 1rem auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -160,10 +164,11 @@ footer {
 }
 
 .quote-text {
-  font-size: 24px;
+  font-size: 22px;
   color: rgb(61, 80, 108);
   font-style: italic;
-  font-weight: 300;
+  font-weight: 100;
+  line-height: 1.5;
 }
 
 .quote-author {
@@ -230,4 +235,5 @@ footer {
 
 footer p {
   margin: 0;
+  font-size: 12px;
 }
