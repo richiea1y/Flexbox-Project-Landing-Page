@@ -43,16 +43,16 @@ footer {
 .hero .container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
+  align-items: center;
+  width: 800px;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #f9faf8;
 }
 
 .hero-text {
   flex: 1; /* 讓文字內容填滿可用空間 */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start; /* 讓內容靠左對齊 */
   /* 
   按鈕變寬 不是因為 flex: 1;，而是因為 align-items: stretch; 讓按鈕填滿整個 .hero-text 的寬度。當你改成 flex-start，按鈕就回復到它應該有的大小。
   
@@ -63,23 +63,22 @@ footer {
 
 .hero-image {
   flex: 1; /* 讓圖片佔據與文字相等的空間 */
-  display: flex;
-  align-items: center; /* 讓圖片垂直置中 */
+  /* display: flex;
+  align-items: center; 讓圖片垂直置中 */
 }
 
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* 確保圖片填滿區塊，不變形 */
-  max-height: 250px; /* 可依需求調整最大高度 */
+.hero-text-title {
+  font-size: 48px;
+  font-weight: 900;
+  margin: 0;
 }
 
-.hero-text h1,
 .hero-text p {
-  margin: 10px 0;
+  margin: 5px 0;
 }
 
 .hero-text button {
+  margin-top: 10px;
   padding: 5px 20px;
   background-color: #3882f6;
   color: #fff;
@@ -90,10 +89,26 @@ footer {
 
 /* 2nd section */
 .second-section .container {
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
+  min-height: 300px;
+  /* 
+  調整 min-height 之後，second-section 的高度變化了，這是因為該區塊內部的內容沒有足夠的高度來自動撐開父容器。
+
+  為什麼 min-height 解決了這個問題？
+  1. 內容沒有撐開父容器
+    - 在 flexbox 佈局（或 block 元素）中，當內部的內容沒有足夠高度時，父容器的高度可能會縮小到內容的最小高度。
+    - 這時候 padding 或 margin 可能不會影響可見高度，因為它們基於內部內容的大小。
+    - 設置 min-height 後，父容器即使內部內容較少，仍會至少保持該高度，從而讓 padding 和 margin 發揮作用。
+  2. display: flex; flex-direction: column; 的影響
+    - second-section .container 使用 display: flex; flex-direction: column; align-items: center;
+    - 這表示內容是垂直排列的，然而，如果沒有 min-height，容器的高度只會等於內容的高度。
+    - 當你設置 min-height: 200px;（例如），即使內容高度低於 200px，該區塊仍會至少有 200px 高度。
+  */
 }
 
 .second-section-text {
@@ -132,10 +147,11 @@ footer {
 /* Quote section */
 .quote {
   background-color: #e5e7eb;
-  padding: 1rem 5rem;
+  padding: 3rem 5rem;
 }
 
 .quote .container {
+  margin: 1rem auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -156,6 +172,53 @@ footer {
   font-weight: 900;
   text-align: right;
   margin: 5px 3rem;
+}
+
+/* Third section */
+.third-section {
+  padding: 4rem 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.third-section .container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem 0;
+  background-color: #3882f6;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.third-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+  margin: 1rem;
+}
+
+.third-text-title {
+  font-size: 16px;
+  margin: 0;
+}
+
+.third-text {
+  font-size: 12px;
+  margin: 0;
+  color: #e5e7eb;
+}
+
+.sign-up {
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 5px 20px;
 }
 
 /* footer section */
